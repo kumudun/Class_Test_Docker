@@ -9,7 +9,7 @@ pipeline {
     environment {
         PATH = "C:\\Program Files\\Docker\\Docker\\resources\\bin;${env.PATH}"
         DOCKERHUB_CREDENTIALS_ID = 'Docker_Hub'
-        DOCKERHUB_REPO = 'kumudun/travelcal/general'
+        DOCKERHUB_REPO = 'kumudun/travelcal'
         DOCKER_IMAGE_TAG = 'latest'
 
 
@@ -17,7 +17,7 @@ pipeline {
     stages{
         stage('check'){
             steps {
-                git url: 'https://github.com/kumudun/Class_Test_Docker.git'
+                git branch: 'main', url: 'https://github.com/kumudun/Class_Test_Docker.git'
             }
         }
 
